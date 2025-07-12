@@ -10,8 +10,8 @@ class CalculatorPage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            Container(height: screenHeight * 0.35, child: Placeholder()),
-            Container(height: screenHeight * 0.10, child: Placeholder()),
+            SizedBox(height: screenHeight * 0.35, child: Placeholder()),
+            SizedBox(height: screenHeight * 0.10, child: Placeholder()),
             Expanded(child: Placeholder()),
           ],
         ),

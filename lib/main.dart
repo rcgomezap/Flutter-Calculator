@@ -1,4 +1,4 @@
-import 'package:calculator/ui/calculator/calculator_page.dart';
+import 'package:calculator/ui/calculator/pages/calculator_page.dart';
 import 'package:calculator/ui/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 

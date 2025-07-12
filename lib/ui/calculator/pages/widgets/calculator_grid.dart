@@ -1,3 +1,4 @@
+import 'package:calculator/ui/calculator/pages/widgets/calculator_button.dart';
 import 'package:flutter/material.dart';
 
 class CalculatorGrid extends StatelessWidget {
@@ -35,7 +36,7 @@ class CalculatorGrid extends StatelessWidget {
       mainAxisSpacing: 10,
       padding: EdgeInsets.all(10),
       children: List.generate(buttons.length, (index) {
-        return Placeholder();
+        return CalculatorButton(label: buttons[index]);
       }),
     );
   }

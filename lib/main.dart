@@ -1,9 +1,16 @@
 import 'package:calculator/ui/calculator/pages/calculator_page.dart';
+import 'package:calculator/ui/calculator/viewmodels/calculator_viewmodel.dart';
 import 'package:calculator/ui/theme/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => CalculatorViewmodel(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {

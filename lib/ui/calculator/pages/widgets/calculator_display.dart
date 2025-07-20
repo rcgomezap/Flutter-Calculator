@@ -26,7 +26,7 @@ class CalculatorDisplay extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  '15',
+                  display.previewText,
                   style: TextStyle(
                     color: Theme.of(context).colorScheme.secondary,
                     fontSize:

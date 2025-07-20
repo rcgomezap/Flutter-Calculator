@@ -22,6 +22,8 @@ class CalculatorViewmodel extends ChangeNotifier {
       switch (label) {
         case 'C':
           _clear();
+        case '=':
+          _movePreviewToInput();
       }
     }
     notifyListeners();
@@ -36,17 +38,22 @@ class CalculatorViewmodel extends ChangeNotifier {
     _resultPreview = '';
   }
 
+  void _movePreviewToInput() {
+    _input = _resultPreview;
+    _resultPreview = '';
+  }
+
   void _updatePreview() {
     // Only update the preview if there are operators in the input (writtableSymbols)
     if (_input.isEmpty || !_input.contains(RegExp(r'[+\-×÷]'))) {
       return;
     }
 
-    String? result = _evaluator.evaluate(
+    num? result = _evaluator.evaluate(
       _input.replaceAll('×', '*').replaceAll('÷', '/'),
     );
     if (result != null) {
-      _resultPreview = result;
+      _resultPreview = result.toString();
     }
   }
 }
